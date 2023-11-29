@@ -2,9 +2,7 @@ package com.masterpi.domain.epi;
 
 import java.io.Serializable;
 import java.sql.Date;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

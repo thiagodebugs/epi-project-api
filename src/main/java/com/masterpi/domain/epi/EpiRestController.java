@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.ResponseEntity.BodyBuilder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -45,9 +46,9 @@ public class EpiRestController {
 	}
 
 	@DeleteMapping(value = "{id}")
-	public ResponseEntity<Void> delete(@PathVariable Integer id) {
+	public BodyBuilder delete(@PathVariable Integer id) {
 		epiService.deleteById(id);
-		return (ResponseEntity<Void>) ResponseEntity.ok();
+		return ResponseEntity.ok();
 	}
 
 }
