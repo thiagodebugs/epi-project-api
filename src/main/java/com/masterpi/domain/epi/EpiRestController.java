@@ -47,7 +47,7 @@ public class EpiRestController {
 	@DeleteMapping(value = "{id}")
 	public ResponseEntity<Void> delete(@PathVariable Integer id) {
 		epiService.deleteById(id);
-		return ResponseEntity.noContent().build();
+		return (ResponseEntity<Void>) ResponseEntity.ok();
 	}
 
 }
